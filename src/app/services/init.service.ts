@@ -497,7 +497,8 @@ export class InitService {
           localStorage.setItem('login', 'true')
         } else {
           // this.authSvc.force_logout()
-          await this.http.get('/apis/reset').toPromise()
+          // await this.http.get('/apis/reset').toPromise()
+          window.location.href = `${this.defaultRedirectUrl}apis/reset`
         }
         const details = {
           group: [],
@@ -540,5 +541,14 @@ export class InitService {
       }
     })
     return returnValue
+  }
+
+  private get defaultRedirectUrl(): string {
+    try {
+      const baseUrl = document.baseURI
+      return baseUrl || location.origin
+    } catch (error) {
+      return location.origin
+    }
   }
 }
