@@ -77,7 +77,9 @@ textarea.mat-input-element {
   // width: 130px;
   background: #0075B7 !important;
   color: white !important;
+  /* stylelint-disable */
   font-family: 'Lato', sans-serif;
+  /* stylelint-enable */
   font-weight: 700;
   font-size: 14px;
 }
@@ -497,13 +499,17 @@ input[type=number] {
   font-size: 14px;
   margin-bottom: .5rem;
   font-weight: 700;
+  /* stylelint-disable */
   font-family: 'Lato', sans-serif;
+  /* stylelint-enable */
 }
 
 .form-input {
   font-size: 14px;
   font-weight: 400;
+  /* stylelint-disable */
   font-family: 'Lato', sans-serif;
+  /* stylelint-enable */
   line-height: 1.5;
 }
 

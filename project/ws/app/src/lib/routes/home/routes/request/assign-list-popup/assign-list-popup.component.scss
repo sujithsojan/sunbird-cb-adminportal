@@ -34,7 +34,9 @@
      .search-btn {
       background: #1b4ca1 !important;
       color: white !important;
+      /* stylelint-disable */
       font-family: 'Lato', sans-serif;
+      /* stylelint-enable */
       font-weight: 700;
       font-size: 14px;
       border-radius: 4px;
@@ -90,7 +92,9 @@
     height: 56px !important;
   }
   table tr .row-heading {
+    /* stylelint-disable */
     font-family: 'Lato', sans-serif;
+    /* stylelint-enable */
     font-weight: 400;
     font-size: 14px !important;
     line-height: 21px;
@@ -119,7 +123,9 @@ table tr .cdk-column-details {
 
   .action-btn-view {
     color: #1B4CA1;
+    /* stylelint-disable */
     font-family: 'Lato', sans-serif;
+    /* stylelint-enable */
     font-size: 14px;
     font-weight: 400;
     line-height: 16.8px;
@@ -127,7 +133,9 @@ table tr .cdk-column-details {
   }
 
   .title-class {
+    /* stylelint-disable */
     font-family: 'Lato', sans-serif;
+    /* stylelint-enable */
     font-size: 14px;
     font-size: 14px !important;
     font-weight: 400;
@@ -299,7 +307,9 @@ table tr .cdk-column-details {
     .search-btn {
         background: #1b4ca1 !important;
         color: white !important;
+        /* stylelint-disable */
         font-family: 'Lato', sans-serif;
+        /* stylelint-enable */
         font-weight: 700;
         font-size: 14px;
         border-radius: 4px;

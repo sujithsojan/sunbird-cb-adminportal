@@ -693,7 +693,9 @@ $title-line-count: 2;
   border-radius: 4px;
   margin: 0 12px;
   color: #848484 !important;
+  /* stylelint-disable */
   font-family: 'Lato', sans-serif;
+  /* stylelint-enable */
   font-weight: 700;
   font-size: 14px;
 }

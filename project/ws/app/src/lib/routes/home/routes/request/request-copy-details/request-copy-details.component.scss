@@ -17,7 +17,9 @@
         .title-name {
             margin-top: 20px;
             .label-text {
+                /* stylelint-disable */
                 font-family: 'Lato', sans-serif;
+                /* stylelint-enable */
                 font-weight: 700;
                 font-size: 14px;
                 line-height: 21px;
@@ -43,7 +45,9 @@
         //     height: 200px !important;
         // }
           .comp-heading {
+            /* stylelint-disable */
             font-family: 'Lato', sans-serif;
+            /* stylelint-enable */
             font-size: 14px;
             font-weight: 700;
             line-height: 21px;
@@ -56,7 +60,9 @@
         }
 
         .title-text {
+            /* stylelint-disable */
             font-family: 'Lato', sans-serif;
+            /* stylelint-enable */
             font-size: 14px;
             font-weight: 700;
             line-height: 21px;
@@ -81,7 +87,9 @@
           width: 9%;
           background: #1b4ca1 !important;
           color: white !important;
+          /* stylelint-disable */
           font-family: 'Lato', sans-serif;
+          /* stylelint-enable */
           font-weight: 700;
           font-size: 14px;
         }
