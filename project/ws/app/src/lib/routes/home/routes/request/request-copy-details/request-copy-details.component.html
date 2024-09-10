@@ -28,6 +28,11 @@
                 i18n="name Error|Explains name is required">
                 Only {{specialCharList}} characters are supported
               </mat-error>
+              <mat-error
+                *ngIf="requestForm.controls['titleName'].errors?.noHtml && !requestForm.controls['titleName'].errors?.pattern"
+                i18n="name Error|Explains name is required">
+                HTML or Js is not allowed
+              </mat-error>
               <mat-hint>
                 Only {{specialCharList}} characters are supported
               </mat-hint>
@@ -48,6 +53,11 @@
                 *ngIf="requestForm.controls['Objective'].hasError('minlength') && !requestForm.controls['Objective'].errors?.pattern"
                 i18n="name Error|Explains name is required">
                 Minimum characters left to create {{10 - requestForm.controls['Objective'].value.length}}
+              </mat-error>
+              <mat-error
+                *ngIf="requestForm.controls['Objective'].hasError('noHtml') && !requestForm.controls['Objective'].errors?.pattern"
+                i18n="name Error|Explains name is required">
+                HTML or Js is not allowed
               </mat-error>
               <mat-error *ngIf="requestForm.controls['Objective'].errors?.pattern"
                 i18n="name Error|Explains name is required">
@@ -70,6 +80,11 @@
                 *ngIf="requestForm.controls['userType'].hasError('minlength') && !requestForm.controls['userType'].errors?.pattern"
                 i18n="name Error|Explains name is required">
                 Minimum characters left to create {{10 - requestForm.controls['userType'].value.length}}
+              </mat-error>
+              <mat-error
+                *ngIf="requestForm.controls['userType'].hasError('noHtml') && !requestForm.controls['userType'].errors?.pattern"
+                i18n="name Error|Explains name is required">
+                HTML or Js is not allowed
               </mat-error>
               <mat-error *ngIf="requestForm.controls['userType'].errors?.pattern"
                 i18n="name Error|Explains name is required">
@@ -194,6 +209,10 @@
             <div class="fonm-element-label label-text">Refrence Link</div>
             <mat-form-field appearance="outline" class="w-full field-height placeholder-text" fxFlex="40">
               <input class="w-full" matInput placeholder="Provide reference link" formControlName="referenceLink">
+              <mat-error *ngIf="requestForm.controls['referenceLink'].hasError('noHtml')"
+                i18n="name Error|Explains name is required">
+                HTML or Js is not allowed
+              </mat-error>
             </mat-form-field>
 
 
