@@ -19,6 +19,7 @@
     </mat-form-field>
     <div class="dialog-btn-items" *ngIf="participants.length > 0">
         <table mat-table [dataSource]="dataSource">
+            <caption></caption>
             <ng-container matColumnDef="select">
                 <th mat-header-cell *matHeaderCellDef>
                     <mat-checkbox (change)="$event ? masterToggle() : null"

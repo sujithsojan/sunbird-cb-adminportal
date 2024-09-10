@@ -1,4 +1,4 @@
-import { Component, Input, OnDestroy, OnChanges, OnInit, ChangeDetectorRef } from '@angular/core'
+import { Component, Input, OnDestroy, OnInit, ChangeDetectorRef } from '@angular/core'
 import { Subscription, timer } from 'rxjs'
 import { Router, ActivatedRoute } from '@angular/router'
 
@@ -13,7 +13,7 @@ interface ITimer {
 
 })
 
-export class EventBannerComponent implements OnDestroy, OnChanges, OnInit {
+export class EventBannerComponent implements OnDestroy, OnInit {
   @Input() data: any
   @Input() totalEvent = 1
   @Input() isRegisteredUser!: boolean
@@ -33,12 +33,6 @@ export class EventBannerComponent implements OnDestroy, OnChanges, OnInit {
     private route: ActivatedRoute,
     private changeDetector: ChangeDetectorRef,
   ) { }
-
-  ngOnChanges() {
-    // this.reInitiateSlideInterval()
-    // this.timerData()
-
-  }
 
   ngOnInit() {
     this.calculateTime()
