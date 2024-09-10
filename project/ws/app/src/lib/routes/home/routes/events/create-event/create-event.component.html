@@ -45,10 +45,12 @@
                                             <ng-container *ngIf="!imageSrcURL">
                                                 <div class="images">
                                                     <div class="img">
-                                                        <img class="imgicon display-block" src="/assets/icons/jpg.svg">
+                                                        <img class="imgicon display-block" src="/assets/icons/jpg.svg"
+                                                            alt="">
                                                     </div>
                                                     <div class="img">
-                                                        <img class="imgicon display-block" src="/assets/icons/png.svg">
+                                                        <img class="imgicon display-block" src="/assets/icons/png.svg"
+                                                            alt="">
                                                     </div>
                                                 </div>
                                             </ng-container>
@@ -132,6 +134,12 @@
                                                                                     createEventForm?.controls['description'].errors?.required">
                                     Description is mandatory
                                 </mat-error>
+                                <mat-error [hidden]="false" i18n="description Error|Explains description is required"
+                                    i18n-aria-label aria-label="description Error|Explains description is required "
+                                    *ngIf="createEventForm?.controls['description']?.touched &&
+                                        createEventForm?.controls['description'].errors?.noHtml">
+                                    HTML and javascript is not allowed
+                                </mat-error>
                                 <mat-hint>{{description.value.length}}/1000 characters</mat-hint>
                             </mat-form-field>
                         </div>
@@ -148,6 +156,10 @@
                                 <mat-error [hidden]="false"
                                     *ngIf="createEventForm?.controls['agenda']?.touched && createEventForm?.controls['agenda'].errors?.required">
                                     Agenda is mandatory
+                                </mat-error>
+                                <mat-error [hidden]="false"
+                                    *ngIf="createEventForm?.controls['agenda']?.touched && createEventForm?.controls['agenda'].errors?.noHtml">
+                                    HTML and javascript is not allowed
                                 </mat-error>
                                 <mat-hint>{{agenda.value.length}}/500 characters</mat-hint>
                             </mat-form-field>
@@ -412,11 +424,12 @@
                             </div>
                             <div class="example-table-container" *ngIf="participantsArr.length > 0">
                                 <table class="mat-body-2">
+                                    <caption></caption>
                                     <tr>
-                                        <td>Full name</td>
-                                        <td>Email</td>
-                                        <td>Type</td>
-                                        <td>MDO name</td>
+                                        <th>Full name</th>
+                                        <th>Email</th>
+                                        <th>Type</th>
+                                        <th>MDO name</th>
                                     </tr>
                                     <tr *ngFor="let row of participantsArr">
                                         <td>{{ row.firstname || row.name}} </td>

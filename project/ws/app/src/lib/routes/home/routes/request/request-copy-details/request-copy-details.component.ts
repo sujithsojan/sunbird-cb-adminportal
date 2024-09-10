@@ -8,6 +8,7 @@ import { ConfirmationPopupComponent } from '../confirmation-popup/confirmation-p
 /* tslint:disable */
 import _ from 'lodash'
 import { debounceTime, distinctUntilChanged, startWith } from 'rxjs/operators'
+import { preventHtmlAndJs } from '../../../validators/prevent-html-and-js.validator'
 /* tslint:enable */
 
 @Component({
@@ -20,7 +21,7 @@ export class RequestCopyDetailsComponent implements OnInit {
   requestForm!: FormGroup
   specialCharList = `( a-z/A-Z , 0-9 . _ - $ / \ : [ ]' ' !)`
   // tslint:disable-next-line:max-line-length
-  noSpecialChar = new RegExp(/^[\u0900-\u097F\u0980-\u09FF\u0C00-\u0C7F\u0B80-\u0BFF\u0C80-\u0CFF\u0D00-\u0D7F\u0A80-\u0AFF\u0B00-\u0B7F\u0A00-\u0A7Fa-zA-Z0-9()$[\]\\.:,_/ -]*$/)
+  noSpecialChar = new RegExp(/^[\u0900-\u09FF\u0C00-\u0CFF\u0B80-\u0BFF\u0D00-\u0D7F\u0A80-\u0AFF\u0B00-\u0B7F\u0A00-\u0A7Fa-zA-Z0-9()$[\]\\.:,_/ -]*$/)
   // learningList = ['Self-paced', 'Instructor-led']
   learningList = [
     {
@@ -80,12 +81,12 @@ export class RequestCopyDetailsComponent implements OnInit {
     this.currentUser = sessionStorage.getItem('idDetails') ? sessionStorage.getItem('idDetails') : ''
 
     this.requestForm = this.formBuilder.group({
-      titleName: new FormControl('', [Validators.required, Validators.pattern(this.noSpecialChar), Validators.minLength(10)]),
-      Objective: new FormControl('', [Validators.required, Validators.pattern(this.noSpecialChar)]),
-      userType: new FormControl('', [Validators.pattern(this.noSpecialChar)]),
+      titleName: new FormControl('', [Validators.required, preventHtmlAndJs(), Validators.pattern(this.noSpecialChar), Validators.minLength(10)]),
+      Objective: new FormControl('', [Validators.required, preventHtmlAndJs(), Validators.pattern(this.noSpecialChar)]),
+      userType: new FormControl('', [preventHtmlAndJs(), Validators.pattern(this.noSpecialChar)]),
       learningMode: new FormControl(''),
       compArea: new FormControl(''),
-      referenceLink: new FormControl(''),
+      referenceLink: new FormControl('', preventHtmlAndJs()),
       requestType: new FormControl('', Validators.required),
       assignee: new FormControl(''),
       providers: new FormControl([[]]),

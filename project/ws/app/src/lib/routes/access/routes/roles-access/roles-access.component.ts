@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, OnInit, Output, EventEmitter } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 import { UsersService } from '../../../home/services/users.service'
-import * as _ from 'lodash'
 import { RolesService } from '../../../home/services/roles.service'
 import { environment } from '../../../../../../../../../src/environments/environment'
 // import { RolesAccessService } from '../../services/roles-access.service'
