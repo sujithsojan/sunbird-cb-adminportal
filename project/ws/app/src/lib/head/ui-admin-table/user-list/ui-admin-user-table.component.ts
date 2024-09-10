@@ -1,6 +1,6 @@
 import {
   Component, OnInit, Input, Output, EventEmitter, ViewChild,
-  AfterViewInit, OnChanges, SimpleChanges,
+  OnChanges, SimpleChanges,
 } from '@angular/core'
 import { SelectionModel } from '@angular/cdk/collections'
 import { MatTableDataSource } from '@angular/material/table'
@@ -20,7 +20,7 @@ import { environment } from '../../../../../../../../src/environments/environmen
   templateUrl: './ui-admin-user-table.component.html',
   styleUrls: ['./ui-admin-user-table.component.scss'],
 })
-export class UIAdminUserTableComponent implements OnInit, AfterViewInit, OnChanges {
+export class UIAdminUserTableComponent implements OnInit, OnChanges {
   @Input() tableData!: ITableData | undefined
   @Input() data?: []
   @Input() needCreateUser?: boolean = undefined
@@ -108,13 +108,11 @@ export class UIAdminUserTableComponent implements OnInit, AfterViewInit, OnChang
     this.length = this.dataSource.data.length
   }
 
-  ngAfterViewInit() { }
-
   applyFilter(filterValue: any) {
 
     if (filterValue) {
       let fValue = filterValue.trim()
-      fValue = filterValue.toLowerCase()
+      fValue = fValue.toLowerCase()
       this.dataSource.filter = fValue
     } else {
       this.dataSource.filter = ''

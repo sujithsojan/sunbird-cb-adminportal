@@ -59,7 +59,7 @@ textarea.mat-input-element {
   background: #0075B7 !important;
   color: white !important;
   /* stylelint-disable */
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato';
   /* stylelint-enable */
   font-weight: 700;
   font-size: 14px;
@@ -498,7 +498,7 @@ input[type=number] {
   margin-bottom: .5rem;
   font-weight: 700;
   /* stylelint-disable */
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato';
   /* stylelint-enable */
 }
 
@@ -506,7 +506,7 @@ input[type=number] {
   font-size: 14px;
   font-weight: 400;
   /* stylelint-disable */
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato';
   /* stylelint-enable */
 }
 
@@ -736,7 +736,9 @@ input.mat-input-element {
 
 .heading{
   font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
+  /* stylelint-disable */
+  font-family: 'Montserrat';
+  /* stylelint-enable */
   font-size: 20px;
   display: block;
   padding: 15px 0;

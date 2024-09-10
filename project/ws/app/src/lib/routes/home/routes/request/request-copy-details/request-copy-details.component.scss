@@ -8,7 +8,9 @@
           cursor: pointer;
         }
         .title-request {
-            font-family: 'Montserrat', sans-serif;
+            /* stylelint-disable */
+            font-family: 'Montserrat';
+            /* stylelint-enable */
             font-weight: 600;
             font-size: 20px;
             line-height: 30px;
@@ -18,7 +20,7 @@
             margin-top: 20px;
             .label-text {
                 /* stylelint-disable */
-                font-family: 'Lato', sans-serif;
+                font-family: 'Lato';
                 /* stylelint-enable */
                 font-weight: 700;
                 font-size: 14px;
@@ -46,7 +48,7 @@
         // }
           .comp-heading {
             /* stylelint-disable */
-            font-family: 'Lato', sans-serif;
+            font-family: 'Lato';
             /* stylelint-enable */
             font-size: 14px;
             font-weight: 700;
@@ -61,7 +63,7 @@
 
         .title-text {
             /* stylelint-disable */
-            font-family: 'Lato', sans-serif;
+            font-family: 'Lato';
             /* stylelint-enable */
             font-size: 14px;
             font-weight: 700;
@@ -88,7 +90,7 @@
           background: #1b4ca1 !important;
           color: white !important;
           /* stylelint-disable */
-          font-family: 'Lato', sans-serif;
+          font-family: 'Lato';
           /* stylelint-enable */
           font-weight: 700;
           font-size: 14px;
@@ -101,8 +103,10 @@
   width: 100% !important;
   .placeholder-text {
     font-size: 14px !important;
-    font-family: 'Lato', sans-serif !important;
-     line-height: 16.8px !important;
+    /* stylelint-disable */
+    font-family: 'Lato' !important;
+    /* stylelint-enable */
+    line-height: 16.8px !important;
     font-weight: 400  !important;
   }
 

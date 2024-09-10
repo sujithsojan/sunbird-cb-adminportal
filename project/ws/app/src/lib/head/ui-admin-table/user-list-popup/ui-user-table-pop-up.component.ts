@@ -1,6 +1,6 @@
 import {
   Component, OnInit, Output, EventEmitter, ViewChild,
-  AfterViewInit, OnChanges, SimpleChanges,
+  OnChanges, SimpleChanges,
 } from '@angular/core'
 import { SelectionModel } from '@angular/cdk/collections'
 import { MatTableDataSource } from '@angular/material/table'
@@ -20,7 +20,7 @@ interface IUser { fullname: string; email: string, userId: string }
   templateUrl: './ui-user-table-pop-up.component.html',
   styleUrls: ['./ui-user-table-pop-up.component.scss'],
 })
-export class UIUserTablePopUpComponent implements OnInit, AfterViewInit, OnChanges {
+export class UIUserTablePopUpComponent implements OnInit, OnChanges {
   tableData!: ITableData | undefined
   data!: IUser[] | undefined
   @Output() clicked?: EventEmitter<any>
@@ -84,15 +84,12 @@ export class UIUserTablePopUpComponent implements OnInit, AfterViewInit, OnChang
     this.dataSource.data = _.get(data, 'data.currentValue')
     this.length = this.dataSource.data.length
   }
-  ngAfterViewInit() {
-
-  }
 
   applyFilter(filterValue: any) {
     this.isSearched = true
     if (filterValue) {
       let fValue = filterValue.trim()
-      fValue = filterValue.toLowerCase()
+      fValue = fValue.toLowerCase()
       this.dataSource.filter = fValue
       this.getAllActiveUsersAPI(fValue)
     } else {

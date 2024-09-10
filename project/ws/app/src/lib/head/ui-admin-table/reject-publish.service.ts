@@ -19,13 +19,11 @@ export class RejectPublishService {
 
   publishData(data: any) {
     return this.http.post(API_END_POINTS.MODERATE_DATA, data)
-    // return this.http.post<any>(`${API_END_POINTS.MODERATE_DATA}`, data)
 
   }
 
   getCategories(): Observable<any> {
     return this.http.get(API_END_POINTS.GET_CATEGORIES)
-    // return this.http.get<any>(`${API_END_POINTS.GET_CATEGORIES}`)
   }
 
 }

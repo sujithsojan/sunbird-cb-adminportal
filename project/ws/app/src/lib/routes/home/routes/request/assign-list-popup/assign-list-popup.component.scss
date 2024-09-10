@@ -19,7 +19,9 @@
     margin: 14px 0 22px;
     .title {
       .title-text {
-        font-family: 'Montserrat', sans-serif;
+        /* stylelint-disable */
+        font-family: 'Montserrat';
+        /* stylelint-enable */
         font-size: 20px;
         font-weight: 600;
         line-height: 30px;
@@ -35,7 +37,7 @@
       background: #1b4ca1 !important;
       color: white !important;
       /* stylelint-disable */
-      font-family: 'Lato', sans-serif;
+      font-family: 'Lato';
       /* stylelint-enable */
       font-weight: 700;
       font-size: 14px;
@@ -93,7 +95,7 @@
   }
   table tr .row-heading {
     /* stylelint-disable */
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato';
     /* stylelint-enable */
     font-weight: 400;
     font-size: 14px !important;
@@ -124,7 +126,7 @@ table tr .cdk-column-details {
   .action-btn-view {
     color: #1B4CA1;
     /* stylelint-disable */
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato';
     /* stylelint-enable */
     font-size: 14px;
     font-weight: 400;
@@ -134,7 +136,7 @@ table tr .cdk-column-details {
 
   .title-class {
     /* stylelint-disable */
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato';
     /* stylelint-enable */
     font-size: 14px;
     font-size: 14px !important;
@@ -308,7 +310,7 @@ table tr .cdk-column-details {
         background: #1b4ca1 !important;
         color: white !important;
         /* stylelint-disable */
-        font-family: 'Lato', sans-serif;
+        font-family: 'Lato';
         /* stylelint-enable */
         font-weight: 700;
         font-size: 14px;
