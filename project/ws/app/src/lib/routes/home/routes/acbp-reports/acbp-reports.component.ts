@@ -1,11 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core'
 import { MatDialog } from '@angular/material/dialog'
 import { ConfigurationsService } from '@sunbird-cb/utils'
-import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE, MatSnackBar } from '@angular/material'
+import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE, MatSnackBar, MatPaginator, MatTableDataSource } from '@angular/material'
 import { environment } from '../../../../../../../../../src/environments/environment'
 /* tslint:disable */
-import _ from 'lodash'
-import { MatPaginator, MatTableDataSource } from '@angular/material'
 import { DatePipe } from '@angular/common'
 import { MomentDateAdapter } from '@angular/material-moment-adapter'
 import moment from 'moment'

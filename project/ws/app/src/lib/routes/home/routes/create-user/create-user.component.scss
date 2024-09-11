@@ -537,7 +537,9 @@ input.mat-input-element {
 
 .heading{
   font-weight: 600;
+  /* stylelint-disable */
   font-family: 'Montserrat' sans-serif;
+  /* stylelint-enable */
   font-size: 1.25rem;
   display: block;
   padding: 0px 0px 1rem 0;

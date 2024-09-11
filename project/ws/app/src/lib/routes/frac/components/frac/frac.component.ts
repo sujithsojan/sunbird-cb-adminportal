@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { FracService } from '../../services/frac.service'
 // import { ConfigurationsService } from '@ws-widget/utils/src/lib/services/configurations.service'
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser'
@@ -11,8 +11,7 @@ import { IFrac } from '../../interfaces/frac.model'
 })
 
 export class FracComponent implements
-  OnInit,
-  OnDestroy {
+  OnInit {
   widgetData: IFrac = {
     iframeId: 'fracData',
     title: 'Frac',
@@ -40,7 +39,4 @@ export class FracComponent implements
     })
   }
 
-  ngOnDestroy() {
-
-  }
 }

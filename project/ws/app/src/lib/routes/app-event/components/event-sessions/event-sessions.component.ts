@@ -58,7 +58,6 @@ export class EventSessionsComponent implements OnInit, OnDestroy {
                     this.sessionStartTime[index] < 0 &&
                     this.sessionEndTime[index] > 0) {
                     this.liveSpeaker.push(this.data[index])
-                  } else {
                   }
                   this.data[index].startRemainingTime = this.sessionStartTime[index]
                   this.data[index].endRemaningTime = this.sessionEndTime[index]
