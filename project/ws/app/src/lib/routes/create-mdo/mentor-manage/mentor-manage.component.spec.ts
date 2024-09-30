@@ -18,10 +18,10 @@ describe('MentorManageComponent', () => {
       data: {
         configSvc: {
           userProfile: {
-            userId: 'sampleId'
-          }
-        }
-      }
+            userId: 'sampleId',
+          },
+        },
+      },
     } as any,
     queryParams: of({ roleId: 'testRoleId' }),
   }
@@ -37,7 +37,7 @@ describe('MentorManageComponent', () => {
     getAllUsersV3: jest.fn().mockReturnValue(of({
       content: [],
       count: 0,
-      facets: []
+      facets: [],
     })),
   }
   const mockConfigSvc = {
@@ -71,23 +71,23 @@ describe('MentorManageComponent', () => {
 
   describe('ngOnInit', () => {
     it('should set currentFilter based on route params', () => {
-      //act
+      // act
       component.ngOnInit()
-      //assert
+      // assert
       expect(component.currentFilter).toBe('verified')
     })
 
     it('should set rootOrgId based on query params', () => {
-      //act
+      // act
       component.ngOnInit()
-      //assert
+      // assert
       expect(component.rootOrgId).toBe('testRoleId')
     })
 
     it('should set isMdoAdmin based on roles', () => {
-      //act
+      // act
       component.ngOnInit()
-      //assert
+      // assert
       expect(component.isMdoAdmin).toBe(true)
     })
 
@@ -103,14 +103,13 @@ describe('MentorManageComponent', () => {
       expect(component.currentUser).toBe('')
     })
 
-
     it('should subscribe to mentorList$ and call getAllVerifiedUsers and getMentorUsers', () => {
-      //arrange
+      // arrange
       const getAllVerifiedUsersSpy = jest.spyOn(component, 'getAllVerifiedUsers')
       const getMentorUsersSpy = jest.spyOn(component, 'getMentorUsers')
-      //act
+      // act
       component.ngOnInit();
-      //assert
+      // assert
       (mockUserService.mentorList$ as Subject<any>).next({ someData: 'test' })
 
       expect(getAllVerifiedUsersSpy).toHaveBeenCalledWith('')
@@ -120,22 +119,22 @@ describe('MentorManageComponent', () => {
 
   describe('getAllVerifiedUsers', () => {
     it('should call getAllVerifiedUsers with correct parameters', () => {
-      //arrange
+      // arrange
       const getAllVerifiedUsersSpy = jest.spyOn(component, 'getAllVerifiedUsers')
-      //act
+      // act
       component.ngOnInit()
-      //assert
+      // assert
       expect(getAllVerifiedUsersSpy).toHaveBeenCalledWith('')
     })
 
     it('should call usersService.getAllUsersV3 with the correct request body', () => {
-      //arrange
+      // arrange
       const getAllUsersV3Spy = jest.spyOn(mockUserService, 'getAllUsersV3')
 
-      //act
+      // act
       component.ngOnInit()
 
-      //assert
+      // assert
       expect(getAllUsersV3Spy).toHaveBeenCalled()
     })
   })
